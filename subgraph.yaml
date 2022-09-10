@@ -1,0 +1,32 @@
+specVersion: 0.0.1
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Send
+    network: goerli
+    source:
+      address: "0x6953535801B2E944Caa0960D2E64bA8C0839Aa3d"
+      abi: Send
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - SendErc1155
+        - SendErc20
+        - SendErc721
+        - SendEth
+      abis:
+        - name: Send
+          file: ./abis/Send.json
+      eventHandlers:
+        - event: SendErc1155(indexed address,indexed address,uint256,uint256,address)
+          handler: handleSendErc1155
+        - event: SendErc20(indexed address,indexed address,uint256,address)
+          handler: handleSendErc20
+        - event: SendErc721(indexed address,indexed address,uint256,address)
+          handler: handleSendErc721
+        - event: SendEth(indexed address,indexed address,uint256)
+          handler: handleSendEth
+      file: ./src/send.ts
