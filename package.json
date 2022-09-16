@@ -4,7 +4,10 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ chee-chyuan/subgraph-dechat",
+    "deploy": "graph deploy --product hosted-service chee-chyuan/subgraph-dechat",
+    "deploy::goerli": "graph build --network goerli && graph deploy --product hosted-service chee-chyuan/subgraph-dechat-goerli",
+    "deploy::optimism-goerli": "graph build --network optimism-goerli && graph deploy --product hosted-service chee-chyuan/subgraph-dechat-op-goerli",
+    "deploy::aurora-testnet": "graph build --network aurora-testnet && graph deploy --product hosted-service chee-chyuan/subgraph-dechat-aurora-testnet",
     "create-local": "graph create --node http://localhost:8020/ chee-chyuan/subgraph-dechat",
     "remove-local": "graph remove --node http://localhost:8020/ chee-chyuan/subgraph-dechat",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 chee-chyuan/subgraph-dechat",

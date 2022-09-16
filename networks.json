@@ -1,7 +1,26 @@
 {
   "goerli": {
     "Send": {
-      "address": "0x6953535801B2E944Caa0960D2E64bA8C0839Aa3d"
+      "address": "0x6953535801B2E944Caa0960D2E64bA8C0839Aa3d",
+      "startBlock": 7602889
+    }
+  },
+  "mumbai": {
+    "Send": {
+      "address": "0x64B89C6474eff2f14167a4EcC1FFb73b51c3d36a",
+      "startBlock": 28132438
+    }
+  },
+  "optimism-goerli": {
+    "Send": {
+      "address": "0x98C98d2DDB9B3d2C36E062c89B60edd8f30a30A0",
+      "startBlock": 34732
+    }
+  },
+  "aurora-testnet": {
+    "Send": {
+      "address": "0x98C98d2DDB9B3d2C36E062c89B60edd8f30a30A0",
+      "startBlock": 100339484
     }
   }
 }

@@ -1,6 +1,6 @@
 specVersion: 0.0.4
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: Send
@@ -20,7 +20,7 @@ dataSources:
         - SendEth
       abis:
         - name: Send
-          file: ./abis/Send.json
+          file: Send/abis/Send.json
       eventHandlers:
         - event: SendErc1155(indexed address,indexed address,uint256,uint256,address)
           handler: handleSendErc1155
@@ -30,4 +30,4 @@ dataSources:
           handler: handleSendErc721
         - event: SendEth(indexed address,indexed address,uint256)
           handler: handleSendEth
-      file: ./src/send.ts
+      file: Send/Send.wasm
