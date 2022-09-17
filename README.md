@@ -1,7 +1,7 @@
 # subgraph-dechat
 
 Mumbai:
-https://thegraph.com/hosted-service/subgraph/chee-chyuan/subgraph-dechat
+https://thegraph.com/hosted-service/subgraph/chee-chyuan/subgraph-dechat-mumbai
 
 Goerli:
 https://thegraph.com/hosted-service/subgraph/chee-chyuan/subgraph-dechat-goerli
