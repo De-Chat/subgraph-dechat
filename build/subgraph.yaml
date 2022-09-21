@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: Send
-    network: optimism-goerli
+    network: mumbai
     source:
       abi: Send
-      address: "0x98C98d2DDB9B3d2C36E062c89B60edd8f30a30A0"
-      startBlock: 34732
+      address: "0x64B89C6474eff2f14167a4EcC1FFb73b51c3d36a"
+      startBlock: 28132438
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6

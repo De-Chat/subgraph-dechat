@@ -4,6 +4,7 @@ type TransferETH @entity {
   to: Bytes!
   timestamp: BigInt!
   amount: BigInt!
+  contractAddress: Bytes!
 }
 
 type TransferERC20 @entity {

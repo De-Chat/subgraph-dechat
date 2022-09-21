@@ -6,7 +6,7 @@ import {
   SendErc721,
   SendEth,
 } from "../generated/Send/Send";
-import { TransferERC1155, TransferERC20 } from "../generated/schema";
+import { TransferERC1155, TransferERC20, TransferERC721, TransferETH } from "../generated/schema";
 
 export function handleSendErc1155(event: SendErc1155): void {
   let entity = new TransferERC1155(event.transaction.hash.toHexString());
@@ -32,7 +32,7 @@ export function handleSendErc20(event: SendErc20): void {
 }
 
 export function handleSendErc721(event: SendErc721): void {
-  let entity = new TransferERC1155(event.transaction.hash.toHexString());
+  let entity = new TransferERC721(event.transaction.hash.toHexString());
   entity.tokenId = event.params.tokenId;
   entity.from = event.params.sender;
   entity.to = event.params.recipient;
@@ -43,7 +43,7 @@ export function handleSendErc721(event: SendErc721): void {
 }
 
 export function handleSendEth(event: SendEth): void {
-  let entity = new TransferERC20(event.transaction.hash.toHexString());
+  let entity = new TransferETH(event.transaction.hash.toHexString());
   entity.amount = event.params.amount;
   entity.from = event.params.sender;
   entity.to = event.params.recipient;

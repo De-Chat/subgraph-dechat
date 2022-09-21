@@ -77,6 +77,15 @@ export class TransferETH extends Entity {
   set amount(value: BigInt) {
     this.set("amount", Value.fromBigInt(value));
   }
+
+  get contractAddress(): Bytes {
+    let value = this.get("contractAddress");
+    return value!.toBytes();
+  }
+
+  set contractAddress(value: Bytes) {
+    this.set("contractAddress", Value.fromBytes(value));
+  }
 }
 
 export class TransferERC20 extends Entity {

@@ -6,6 +6,7 @@
     "build": "graph build",
     "deploy": "graph deploy --product hosted-service chee-chyuan/subgraph-dechat",
     "deploy::goerli": "graph build --network goerli && graph deploy --product hosted-service chee-chyuan/subgraph-dechat-goerli",
+    "deploy::mumbai": "graph build --network mumbai && graph deploy --product hosted-service chee-chyuan/subgraph-dechat-mumbai",
     "deploy::optimism-goerli": "graph build --network optimism-goerli && graph deploy --product hosted-service chee-chyuan/subgraph-dechat-op-goerli",
     "deploy::aurora-testnet": "graph build --network aurora-testnet && graph deploy --product hosted-service chee-chyuan/subgraph-dechat-aurora-testnet",
     "create-local": "graph create --node http://localhost:8020/ chee-chyuan/subgraph-dechat",
